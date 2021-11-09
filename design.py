@@ -23,13 +23,13 @@ import os
 #        
         
 
-def mainPublish(major,minor,version,environment,groupid,nameraml):
+def mainPublish(major,minor,version,groupid,nameraml):
     nameApplication = getTitle()
     print(nameApplication)
     responsePublishDesign = ''
     tokenAuth = loginValid()
     responseExistAsset = validExistAsset(tokenAuth,nameApplication)
-    responseCreateAsset = publishAsset(tokenAuth,major,minor,version,nameApplication,groupid,environment,nameraml)
+    responseCreateAsset = publishAsset(tokenAuth,major,minor,version,nameApplication,groupid,nameraml)
 
     return 'ok'
 
@@ -83,8 +83,8 @@ def validExistAsset(tokenAuth,name):
     return 'si'
 
 
-def publishAsset(tokenAuth,major,minor,version,name,groupid,environment,nameraml):
-    url = "https://eu1.anypoint.mulesoft.com//apimanager/api/v1/organizations/"+groupid+"/environments/"+environment+"/apis"
+def publishAsset(tokenAuth,major,minor,version,name,groupid,nameraml):
+    #url = "https://eu1.anypoint.mulesoft.com//apimanager/api/v1/organizations/"+groupid+"/environments/"+environment+"/apis"
     major = str(major)
     minor = str(minor)
     version = str(version)
@@ -195,5 +195,5 @@ def deleteApiManager(tokenAuth,apiid):
 
 
 
-mainPublish(sys.argv[0],sys.argv[1],sys.argv[2],sys.argv[3],sys.argv[4],sys.argv[5])
+mainPublish(sys.argv[0],sys.argv[1],sys.argv[2],sys.argv[3],sys.argv[4])
 
