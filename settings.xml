@@ -12,6 +12,10 @@
       <password>Maniac321.</password>
     </server>
   </servers>
+  <id>Mule</id>
+  <activation>
+    <activeByDefault>true</activeByDefault>
+  </activation>
   <repositories>
     <repository>
       <id>mulesoft-releases-ee</id>
@@ -31,7 +35,9 @@
       <url>http://repository.mulesoft.org/releases/
       <layout>default</layout>
     </repository>
+      
   </repositories>
+      
   <pluginRepositories>
     <pluginRepository>
       <id>mulesoft-releases</id>
@@ -40,6 +46,7 @@
       <layout>default</layout>
     </pluginRepository>
   </pluginRepositories>
+    
 </settings>
 
 
