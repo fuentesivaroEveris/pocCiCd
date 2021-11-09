@@ -6,6 +6,11 @@
       <username>jtorpoco</username>
       <password>Maniac321.</password>
     </server>
+    <server>
+      <id>mulesoft-releases-ee</id>
+      <username>jtorpoco</username>
+      <password>Maniac321.</password>
+    </server>
   </servers>
   <repositories>
     <repository>
