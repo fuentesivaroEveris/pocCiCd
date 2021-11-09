@@ -7,7 +7,7 @@
       <password>Maniac321.</password>
     </server>
     <server>
-      <id>mulesoft-releases-ee</id>
+      <id>mulesoft-releases</id>
       <username>jtorpoco</username>
       <password>Maniac321.</password>
     </server>
@@ -17,18 +17,7 @@
     <activeByDefault>true</activeByDefault>
   </activation>
   <repositories>
-    <repository>
-      <id>mulesoft-releases-ee</id>
-        <name>mulesoft-releases-ee</name>
-        <url>https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/</url>
-        <layout>default</layout>
-        <releases>
-          <enabled>true</enabled>
-        </releases>
-        <snapshots>
-          <enabled>true</enabled>
-        </snapshots>
-    </repository>
+    
     <repository>
       <id>mulesoft-releases</id>
       <name>MuleSoft Repository</name>
