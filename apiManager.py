@@ -3,29 +3,45 @@ import json
 import sys
 import os
 
-def mainValid(major,minor,version,environment,groupid,nameraml):
+
+def mainPublish(major,minor,version,environment,groupid,nameraml):
     nameApplication = getTitle()
     print(nameApplication)
     responsePublishDesign = ''
     tokenAuth = loginValid()
     responseExistAsset = validExistAsset(tokenAuth,nameApplication)
-    #if responseExistAsset == 'no':
-    #    return 'valid ok'
     responseCreateAsset = publishAsset(tokenAuth,major,minor,version,nameApplication,groupid,environment,nameraml)
-    #    responsePublishDesign = publishAsset()
-    #response = publishAsset(tokenAuth,major,minor,version)
+
+    return 'ok'
+
+
+def mainApiManager(major,minor,version,environment,groupid,nameraml):
+    nameApplication = getTitle()
+    tokenAuth = loginValid()
     responseoldApiManager = oldPublishApiManager(tokenAuth,nameApplication,groupid,environment)
-    print(responseExistAsset)
-    print(responseoldApiManager)
-    
     for item in responseoldApiManager:
         print(deleteApiManager(tokenAuth,item))
-        
-        
     responseApiManager = publishApiManager(tokenAuth,major,minor,version,nameApplication)
-    print(responseApiManager)
         
     return 'ok'
+
+
+#def mainValid(major,minor,version,environment,groupid,nameraml):
+#    nameApplication = getTitle()
+#    print(nameApplication)
+#    responsePublishDesign = ''
+#    tokenAuth = loginValid()
+#    responseExistAsset = validExistAsset(tokenAuth,nameApplication)
+#    #if responseExistAsset == 'no':
+#    #    return 'valid ok'
+#    responseCreateAsset = publishAsset(tokenAuth,major,minor,version,nameApplication,groupid,environment,nameraml)
+#    #    responsePublishDesign = publishAsset()
+#    #response = publishAsset(tokenAuth,major,minor,version)
+#    responseoldApiManager = oldPublishApiManager(tokenAuth,nameApplication,groupid,environment)
+#    print(responseExistAsset)
+#    print(responseoldApiManager)
+    
+
 
 def getTitle():
     with open('api-cicd-examplewho-poc.raml') as f:
