@@ -58,27 +58,34 @@
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
-			<extensions>true</extensions>
 			<configuration>
-				<cloudHubDeployment>
-				    <uri>https://anypoint.mulesoft.com</uri>
-					<businessGroupId>f0280dae-3bd2-4d24-b347-3fde9546ba11</businessGroupId>
-					<muleVersion>4.3.0</muleVersion>
-					<!-- Deploy User Parameter --> 
-					<username></username>
-					<password></password>
-					<!-- Environment Parameter -->
-					<environment>DEV</environment>
-					<applicationName>eapi-custom-metrics-who-poc-1-0-dev</applicationName>
-					 <workers>1</workers>
-					<workerType>Micro</workerType>
-					<objectStoreV2>true</objectStoreV2>
-					<properties>
-				    <maven.compiler.target>1.8</maven.compiler.target>
-				    <maven.compiler.source>1.8</maven.compiler.source>
-				</properties>
-				</cloudHubDeployment>
-			</configuration>
+					<cloudHubDeployment>
+						<uri>https://eu1.anypoint.mulesoft.com</uri>
+						<muleVersion>4.3.0</muleVersion>
+						<businessGroupId>3f50a308-b636-4db8-84be-c62ad0c4dd31</businessGroupId>
+						<!-- Deploy User Parameter -->
+						<username>jtorpoco</username>
+						<password>Maniac321.</password>
+						<!-- Environment Parameter -->
+						<region>eu-central-1</region>
+						<environment>DEV</environment>
+						<applicationName>api-devops-who</applicationName>
+						<workerType>Micro</workerType>
+						<objectStoreV2>true</objectStoreV2>
+						<properties>
+							<env>DEV</env>
+						</properties>
+					</cloudHubDeployment>
+				</configuration>
+				<executions>
+					<execution>
+						<id>deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
 		</plugin>
 	</plugins>
 </build>
