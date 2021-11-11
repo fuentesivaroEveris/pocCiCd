@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>f0280dae-3bd2-4d24-b347-3fde9546ba11</groupId>
+	<groupId>3f50a308-b636-4db8-84be-c62ad0c4dd31</groupId>
 	<artifactId>mule-parent</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
