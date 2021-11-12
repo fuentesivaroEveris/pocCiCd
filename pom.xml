@@ -69,7 +69,7 @@
 						<!-- Environment Parameter -->
 						<region>eu-central-1</region>
 						<environment>DEV</environment>
-						<applicationName>api-example-cicd-validation-who-poc</applicationName>
+						<applicationName>api-example-cicd-validation-who-poc-dev</applicationName>
 						<workerType>Micro</workerType>
 						<objectStoreV2>true</objectStoreV2>
 						<properties>
