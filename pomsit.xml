@@ -73,7 +73,7 @@
 						<workerType>Micro</workerType>
 						<objectStoreV2>true</objectStoreV2>
 						<properties>
-							<env>DEV</env>
+							<env>SIT</env>
 						</properties>
 					</cloudHubDeployment>
 				</configuration>
